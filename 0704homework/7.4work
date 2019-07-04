@@ -1,0 +1,104 @@
+void setup()
+{
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  	if(Serial.available()> 0)
+  	{
+        int data = Serial.read()-'0';
+        switch(data)
+  	  {
+    	case 0:a();break;
+    	case 1:b();break;
+    	case 2:c();break;
+    	case 3:d();break;
+    	case 4:e();break;
+    	case 5:f();break;
+    	case 6:g();break;
+    	case 7:h();break;
+    	case 8:i();break;
+    	case 9:j();break;
+    
+       }
+    	   
+  	 }
+
+
+}
+
+void a()
+{
+  digitalWrite(2,LOW);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW);
+  digitalWrite(5,LOW);
+  
+}
+void b()
+{
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW );
+  digitalWrite(5,LOW);
+}
+void c()
+{
+  digitalWrite(2,LOW);
+  digitalWrite(3,HIGH);
+  digitalWrite(4,LOW );
+  digitalWrite(5,LOW);
+}
+void d()
+{
+  digitalWrite(2,HIGH );
+  digitalWrite(3,HIGH );
+  digitalWrite(4,LOW);
+  digitalWrite(5,LOW);
+}
+void e()
+{
+  digitalWrite(2,LOW );
+  digitalWrite(3,LOW );
+  digitalWrite(4,HIGH );
+  digitalWrite(5,LOW );
+}
+void f()
+{
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+}
+void g()
+{
+  digitalWrite(2,LOW);
+  digitalWrite(3,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+}
+void h()
+{
+  digitalWrite(2,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+}
+void i()
+{
+  digitalWrite(2,LOW);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+}
+void j()
+{
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+}
