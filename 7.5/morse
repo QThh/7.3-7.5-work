@@ -1,0 +1,241 @@
+class Morse
+{
+public:
+  Morse(int pin);
+  void dot();
+  void dash();
+private:
+  int _pin;
+};
+
+Morse::Morse(int pin)
+{
+  pinMode(pin, OUTPUT);
+  _pin = pin;
+}
+
+void Morse::dot()
+{
+  digitalWrite(_pin, HIGH);
+  delay(250);
+  digitalWrite(_pin, LOW);
+  delay(250);  
+}
+
+void Morse::dash()
+{
+  digitalWrite(_pin, HIGH);
+  delay(1000);
+  digitalWrite(_pin, LOW);
+  delay(250);
+}
+
+Morse morse(13);
+void setup() {
+  pinMode(13,OUTPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  while(Serial.available()> 0)
+  {
+    char x = Serial.read();
+    switch(x)
+    {
+      case 'a':A();break;
+      case 'b':B();break;
+      case 'c':C();break;
+      case 'd':D();break;
+      case 'e':E();break;
+      case 'f':f();break;
+      case 'g':G();break;
+      case 'h':H();break;
+      case 'i':I();break;
+      case 'j':J();break;
+      case 'k':K();break;
+      case 'l':L();break;
+      case 'm':M();break;
+      case 'n':N();break;
+      case 'o':O();break;
+      case 'p':P();break;
+      case 'q':Q();break;
+      case 'r':R();break;
+      case 's':S();break;
+      case 't':T();break;
+      case 'u':U();break;
+      case 'v':V();break;
+      case 'w':W();break;
+      case 'x':X();break;
+      case 'y':Y();break;
+      case 'z':Z();break;
+      case ' ':
+      case '\n':space();break;
+
+    }
+  }
+}
+void space()
+{
+  digitalWrite(13, LOW);
+  delay(2000);
+}
+void A()
+{
+  morse.dot();
+  morse.dash();
+} 
+void B()
+{
+  morse.dash();
+  morse.dot();
+  morse.dot();
+  morse.dot();
+}
+void C()
+{
+  morse.dash();
+  morse.dot();
+  morse.dash();
+  morse.dot();
+}
+void D()
+{
+  morse.dash();
+  morse.dot();
+  morse.dot();
+}
+void E()
+{
+  morse.dot();
+}
+void f()
+{
+  morse.dot();
+  morse.dot();
+  morse.dash();
+  morse.dot();
+}
+void G()
+{
+  morse.dash();
+  morse.dash();
+  morse.dot();
+}
+void H()
+{
+  morse.dot();
+  morse.dot();
+  morse.dot();
+  morse.dot();
+}
+void I()
+{
+  morse.dot();
+  morse.dot();
+}
+void J()
+{
+  morse.dot();
+  morse.dash();
+  morse.dash();
+  morse.dash();
+}
+void K()
+{
+  morse.dash();
+  morse.dot();
+  morse.dash();
+}
+void L()
+{
+  morse.dot();
+  morse.dash();
+  morse.dot();
+  morse.dot();
+}
+void M()
+{
+  morse.dash();
+  morse.dash();
+}
+void N()
+{
+  morse.dash();
+  morse.dot();
+}
+void O()
+{
+  morse.dash();
+  morse.dash();
+  morse.dash();
+}
+void P()
+{
+  morse.dot();
+  morse.dash();
+  morse.dash();
+  morse.dot();
+}
+void Q()
+{
+  morse.dash();
+  morse.dash();
+  morse.dot();
+  morse.dash();
+}
+void R()
+{
+  morse.dot();
+  morse.dash();
+  morse.dot();
+}
+void S()
+{
+  morse.dot();
+  morse.dot();
+  morse.dot();
+}
+void T()
+{
+  morse.dash();
+}
+void U()
+{
+  morse.dot();
+  morse.dot();
+  morse.dash();
+}
+void V()
+{
+  morse.dot();
+  morse.dot();
+  morse.dot();
+  morse.dash();
+}
+void W()
+{
+  morse.dot();
+  morse.dash();
+  morse.dash();
+}
+void X()
+{
+  morse.dash();
+  morse.dot();
+  morse.dot();
+  morse.dash();
+}
+void Y()
+{
+  morse.dash();
+  morse.dot();
+  morse.dash();
+  morse.dash();
+}
+void Z()
+{
+  morse.dash();
+  morse.dash();
+  morse.dot();
+  morse.dot();
+}
