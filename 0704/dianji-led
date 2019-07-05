@@ -41,13 +41,11 @@ void forward()
   digitalWrite(6,LOW);
   digitalWrite(9,HIGH);
   digitalWrite(10,LOW);
-  while(1)
-{
-    digitalWrite(8, HIGH);
-    delay(250);
-    digitalWrite(8, LOW);
-    delay(250);
-}
+  digitalWrite(8, HIGH);
+  delay(1000);
+  digitalWrite(8, LOW);
+  delay(250);
+
 }
 void backward()
 {
@@ -55,13 +53,10 @@ void backward()
   digitalWrite(6,HIGH);
   digitalWrite(9,LOW);
   digitalWrite(10,HIGH);
-  while(1)
-  {
-    digitalWrite(2, HIGH);
-    delay(250);
-    digitalWrite(2, LOW);
-    delay(250);
-  }
+  digitalWrite(2, HIGH);
+  delay(1000);
+  digitalWrite(2, LOW);
+  delay(250);
 }
 void right()
 {
@@ -69,13 +64,10 @@ void right()
   digitalWrite(6,LOW);
   digitalWrite(9,LOW);
   digitalWrite(10,HIGH);
-  while(1)
-  {
-    digitalWrite(3, HIGH);
-    delay(250);
-    digitalWrite(3, LOW);
-    delay(250);
-  }
+  digitalWrite(3, HIGH);
+  delay(1000);
+  digitalWrite(3, LOW);
+  delay(250);
 }
 void left()
 {
@@ -83,13 +75,10 @@ void left()
   digitalWrite(6,HIGH);
   digitalWrite(9,HIGH);
   digitalWrite(10,LOW);
-  while(1)
-  {
-    digitalWrite(4, HIGH);
-    delay(250);
-    digitalWrite(4, LOW);
-    delay(250);
-  }
+  digitalWrite(4, HIGH);
+  delay(1000);
+  digitalWrite(4, LOW);
+  delay(250);
 }
 void stop()
 {
